@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.simpro.plugins.squarepos" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>IOSSquarePOS</name>
+    <js-module name="IOSSquarePOS" src="www/IOSSquarePOS.js">
+        <clobbers target="cordova.plugins.IOSSquarePOS" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="IOSSquarePOS">
+                <param name="ios-package" value="SquarePointOfSale"/>
+            </feature>
+        </config-file>
+        <!-- <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+                    <key>LSApplicationQueriesSchemes</key>
+                    <array>
+                        <string>square-commerce-v1</string>
+                    </array>
+                    <key>CFBundleURLTypes</key>
+                    <array>
+                        <dict>
+                            <key>CFBundleTypeRole</key>
+                            <string>Editor</string>
+                            <key>CFBundleURLName</key>
+                            <string>Square</string>
+                            <key>CFBundleURLSchemes</key>
+                            <array>
+                                <string>simproMobileSquare</string>
+                            </array>
+                        </dict>
+                    </array>
+        </config-file> -->
+        <header-file src="src/ios/SquarePointOfSale.h" />
+        <source-file src="src/ios/SquarePointOfSale.m" />
+    </platform>
+
+</plugin>

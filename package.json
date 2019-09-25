@@ -1,0 +1,24 @@
+{
+	"name": "cordova-plugin-square-pos-ios",
+	"version": "0.0.1",
+	"description": "Cordova Plugin to interface with the Square Point of Sale",
+	"cordova": {
+	  "id": "cordova-plugin-square-pos-ios",
+	  "platforms": [
+		"ios"
+	  ]
+	},
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/simPRO-Software/cordova-plugin-square-pos-ios.git"
+  },
+	"keywords": [
+	  "ecosystem:cordova",
+	  "cordova-ios"
+	],
+	"author": "Jagan",
+	"license": "MIT",
+	"publishConfig": {
+	  "access": "public"
+	}
+}

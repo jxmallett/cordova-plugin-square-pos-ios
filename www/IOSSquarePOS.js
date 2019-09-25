@@ -1,4 +1,3 @@
-cordova.define("com.simpro.plugins.squarepos.IOSSquarePOS", function(require, exports, module) {
     var exec = require('cordova/exec');
     var IOSSquarePOS = function() {
     };
@@ -10,12 +9,11 @@ cordova.define("com.simpro.plugins.squarepos.IOSSquarePOS", function(require, ex
             amount: options.amount ? options.amount : 1,
             currencyCode: options.currencyCode? options.currencyCode : "AUD",
             squareClientId: options.squareClientId ? options.squareClientId : "",
-            squareCallbackFunction: options.squareCallbackFunction? options.squareCallbackFunction : ""
+            squareCallbackFunction: options.squareCallbackFunction? options.squareCallbackFunction : "",
+            location: options.location ? options.location : "",
+            notes: options.notes ? options.notes : ""
         };
         return cordova.exec(success, fail, "IOSSquarePOS", "initTransaction", [params]);
     };
-    
     window.iosSquarePOS = new IOSSquarePOS();
-    
-    });
   

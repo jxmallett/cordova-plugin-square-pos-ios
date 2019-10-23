@@ -24,7 +24,7 @@
                                                         locationID:locationID
                                                              notes:notes
                                                         customerID:nil
-                                              supportedTenderTypes:SCCAPIRequestTenderTypeAll
+                                              supportedTenderTypes:13 //allows all payments except cash
                                                  clearsDefaultFees:NO
                                    returnAutomaticallyAfterPayment:TRUE
                                                              error:&error ];

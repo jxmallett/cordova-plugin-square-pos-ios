@@ -42,7 +42,21 @@
     SCCAPIResponse  *response = [SCCAPIResponse responseWithResponseURL:url error:&decodeError];
     CDVPluginResult* pluginResult = nil;
     NSString* transactionID = response.transactionID;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:transactionID];
+    if(transactionID) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:transactionID];
+    } else {
+        NSError* error = response.error;
+        NSInteger errorCode = error.code;
+        NSString*  errorMessage = @"";
+        if(errorCode == 5) {
+            errorMessage = @"com.squareup.register.ERROR_ILLEGAL_LOCATION_ID";
+        } else if(errorCode == 3) {
+            errorMessage = @"com.squareup.register.ERROR_USER_NOT_LOGGED_IN";
+        } else {
+            errorMessage = @"com.squareup.register.ERROR_TRANSACTION_CANCELED";
+        }
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:errorMessage];
+    }
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
 }
 

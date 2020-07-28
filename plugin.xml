@@ -12,27 +12,16 @@
                 <param name="ios-package" value="SquarePointOfSale"/>
             </feature>
         </config-file>
-        <!-- <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-                    <key>LSApplicationQueriesSchemes</key>
-                    <array>
-                        <string>square-commerce-v1</string>
-                    </array>
-                    <key>CFBundleURLTypes</key>
-                    <array>
-                        <dict>
-                            <key>CFBundleTypeRole</key>
-                            <string>Editor</string>
-                            <key>CFBundleURLName</key>
-                            <string>Square</string>
-                            <key>CFBundleURLSchemes</key>
-                            <array>
-                                <string>simproMobileSquare</string>
-                            </array>
-                        </dict>
-                    </array>
-        </config-file> -->
         <header-file src="src/ios/SquarePointOfSale.h" />
         <source-file src="src/ios/SquarePointOfSale.m" />
+        <podspec>
+            <config>
+                <source url="https://github.com/square/SquarePointOfSaleSDK-iOS.git" />
+            </config>
+            <pods>
+                <pod name="SquarePointOfSaleSDK" spec="3.3.2" />
+            </pods>
+        </podspec>
     </platform>
 
 </plugin>

@@ -14,14 +14,6 @@
         </config-file>
         <header-file src="src/ios/SquarePointOfSale.h" />
         <source-file src="src/ios/SquarePointOfSale.m" />
-        <podspec>
-            <config>
-                <source url="https://github.com/square/SquarePointOfSaleSDK-iOS.git" />
-            </config>
-            <pods>
-                <pod name="SquarePointOfSaleSDK" spec="3.3.2" />
-            </pods>
-        </podspec>
+        <framework src="/Users/simprodev/repos/SquarePointOfSaleSDK-iOS/" custom="true" />
     </platform>
-
 </plugin>

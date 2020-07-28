@@ -14,6 +14,9 @@
         </config-file>
         <header-file src="src/ios/SquarePointOfSale.h" />
         <source-file src="src/ios/SquarePointOfSale.m" />
-        <framework src="../../SquarePointOfSaleSDK-iOS/SquarePointOfSaleSDK.xcodeproj" custom="true" />
+        <dependency id="cordova-plugin-cocoapod-support"/>
+        <pods-config ios-min-version="9.0" use-frameworks="true">
+        </pods-config>
+        <pod name="SquarePointOfSaleSDK" git="https://github.com/square/SquarePointOfSaleSDK-iOS" commit="fcb44143c9b" />
     </platform>
 </plugin>
